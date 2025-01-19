@@ -1,0 +1,109 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #3498db;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .board {
+    display: inline-block;
+    margin-top: 20px;
+    border: 3px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 2px solid #3498db;
+  }
+  
+  .cell:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.1);
+  }
+  
+  .cell.X {
+    color: #e74c3c;
+  }
+  
+  .cell.O {
+    color: #2ecc71;
+  }
+  
+  .reset-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reset-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .status {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #34495e;
+    font-weight: bold;
+  }
+  
+  /* Animation for winning line */
+  @keyframes winning-line {
+    0% {
+      transform: scaleX(0);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scaleX(0);
+      opacity: 0.7;
+    }
+  }
+  
+  .winning-line {
+    animation: winning-line 1s ease-in-out;
+  }
+  
